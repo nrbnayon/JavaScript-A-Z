@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Viewer</title>
+    <style>
+        /* Style for the code container */
+        #code-container {
+            position: relative;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            font-family: monospace;
+        }
+
+        /* Style for the copy button */
+        #copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="code-container">
+    <pre>
+        <code id="code">
+            #include <iostream>
+            
+            int main() {
+                std::cout << "Hello, World!" << std::endl;
+                return 0;
+            }
+        </code>
+    </pre>
+    <button id="copy-button">Copy</button>
+</div>
+
+<script>
+    // Function to copy code to the clipboard
+    function copyCodeToClipboard() {
+        var codeElement = document.getElementById('code');
+        var range = document.createRange();
+        range.selectNode(codeElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert('Code copied to clipboard!');
+    }
+
+    // Attach click event to the copy button
+    document.getElementById('copy-button').addEventListener('click', copyCodeToClipboard);
+</script>
+
+</body>
+</html>
