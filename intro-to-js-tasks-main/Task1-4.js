@@ -65,7 +65,10 @@ Therefore, the result of both lines of code will be:
 
 a = false;
 
-In summary:
-- `isNaN('11')` is `false` because `'11'` can be converted into a number.
-- `isNaN(2-10)` is `false` because `2-10` results in a number `-8`.
+var a = isNaN(2 - 10);
+Here, 2 - 10 is a numerical operation, which results in -8. So, effectively, this line is equivalent to isNaN(-8).
+
+Similarly, isNaN() coerces its argument to a number before checking. -8 is a valid number, so isNaN(-8) returns false.
+
+So, after this line executes, the variable a will be assigned the value false again.
  */
