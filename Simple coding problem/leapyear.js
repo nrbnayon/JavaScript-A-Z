@@ -1,35 +1,40 @@
-// Leap Year
 /**
- * simple year with leap year not 100% true if the year is divisible by 4
- */
+ * SIMPLE LOGIC:
+ * year will be e leap year if the year is divisible by 4
+*/
 
 function isLeapYear(year) {
-  if (year % 4 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if (year % 4 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
-const leapYear2 = isLeapYear(2001);
-console.log(leapYear2);
+const isLipi = isLeapYear(2052);
+console.log(isLipi);
 
 /**
- *  those year that is not divisible by 100, but if the year is divisible by 4
- * then the year will be a leap year
- */
+ * 1. those year that is not divisible by 100 and if the year is divisible by 4: then it will be a leap year
+ * 2. if the year is divisible by 400, then it is a leap year
+ * 3. else it is not a leap year
+*/
 
-function isLeapYearM(year) {
-  if (year % 100 !== 0 && year % 4 === 0) {
-    return true;
-  } else if (year % 100 === 0 && year % 400 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+function isLearYear2(year) {
+    if (year % 100 !== 0 && year % 4 === 0) {
+        return true;
+    }
+    else if (year % 400 === 0) {
+        return true
+    }
+    else {
+        return false;
+    }
 }
-const leapYear1 = isLeapYearM(2100);
-const leapYear5 = isLeapYearM(2400);
-const leapYear3 = isLeapYearM(1900);
-const leapYear4 = isLeapYearM(2052);
-console.log(leapYear1, leapYear5, leapYear3, leapYear4);
+
+const isLeap = isLearYear2(2100);
+const isLeap2 = isLearYear2(2400);
+const isLeap3 = isLearYear2(1900);
+const isLeap4 = isLearYear2(2052);
+console.log(isLeap, isLeap2, isLeap3, isLeap4);

@@ -15,7 +15,22 @@ function noDuplicate(array) {
     }
   }
   return unique;
-  console.log(unique);
 }
 const uniqueArray = noDuplicate(numbers);
 console.log(uniqueArray);
+
+const numbersCheck = [1, 4, 5, 3, 1, 2, 2, 3, 5];
+
+function dupNumCheck() {
+  const uniqueNumbers = [];
+  for (const number of numbersCheck) {
+    if (uniqueNumbers.includes(number) === false) {
+      uniqueNumbers.push(number);
+    }
+  }
+  return uniqueNumbers;
+}
+
+const result = dupNumCheck(numbersCheck);
+
+console.log(result);

@@ -29,5 +29,5 @@ function monthlySavings(allPayment, livingCost) {
     return "Sorry!, Invalid Input try again";
   }
 }
-const taka = monthlySavings([1000, 2900, 2900], 6000);
+const taka = monthlySavings(100, [900, 2700, 3400]);
 console.log(taka);
