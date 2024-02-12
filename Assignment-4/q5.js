@@ -31,3 +31,9 @@ function monthlySavings(allPayment, livingCost) {
 }
 const taka = monthlySavings(100, [900, 2700, 3400]);
 console.log(taka);
+
+//      SAMPLE INPUT                SAMPLE OUTPUT
+// [ 1000 , 2000 , 3000 ] , 5400    0
+// [ 1000 , 2000 , 2500 ] , 5000    500
+// [ 900 , 2700 , 3400] , 10000     “earn more”
+//  100, [ 900 , 2700 , 3400]       invalid input
